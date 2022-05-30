@@ -43,8 +43,8 @@
         <span>Stake</span>
       </v-btn> -->
       <v-tabs v-model="tab" left slider-color="#B224EF">
-        <v-tab>About</v-tab>
-        <v-tab>Stake</v-tab>
+        <v-tab :to="'/'">About</v-tab>
+        <v-tab :to="'/stake'">Stake</v-tab>
       </v-tabs>
       <!-- <v-item-group mandatory>
         <v-container>
@@ -81,9 +81,11 @@
 .v-toolbar {
   transition: 0.6s;
 }
+
 .v-tab {
   transition: 0.6s;
 }
+
 .expand {
   height: 80px !important;
   padding-top: 10px;

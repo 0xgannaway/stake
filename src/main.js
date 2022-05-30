@@ -1,11 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
 import vuetify from './plugins/vuetify';
-import VueYouTubeEmbed from 'vue-youtube-embed'
-// import firebase from 'firebase/app'
-// import 'firebase/firestore'
+import router from './plugins/router';
 
-Vue.use(VueYouTubeEmbed)
 Vue.config.productionTip = false
 
 // firebase.initializeApp({
@@ -15,6 +12,6 @@ Vue.config.productionTip = false
 // export const db = firebase.firestore()
 
 new Vue({
-  vuetify,
+  vuetify, router,
   render: h => h(App)
 }).$mount('#app')

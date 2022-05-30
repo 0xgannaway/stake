@@ -5,7 +5,7 @@
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="who-we-are mb-4">Who We Are</h1>
+              <h1 class="who-we-are mb-4 ml-n4">Who We Are</h1>
               <h1 class="who-we-are-desc">
                 To Become An Unique And Irreplaceable Institution<br />
                 Dedicated to the Emerging frontier of crypto
@@ -41,15 +41,20 @@
         </v-col>
       </v-row>
     </v-container>
+    <foote />
   </section>
 </template>
 
 <script>
+import foote from "./Footer";
+
 export default {
+
+  components: {
+    foote,
+  },
   data() {
     return {
-      dialog: false,
-      videoId: "i8IvvHJssWE",
       features: [
         {
           img: require("@/assets/img/icon2.png"),
@@ -70,32 +75,10 @@ export default {
     };
   },
   watch: {
-    dialog(value) {
-      if (!value) {
-        this.pause();
-      }
-    },
+
   },
   methods: {
-    ready(event) {
-      this.player = event.target;
-    },
-    playing(event) {
-      // The player is playing a video.
-    },
-    change() {
-      // when you change the value, the player will also change.
-      // If you would like to change `playerVars`, please change it before you change `videoId`.
-      // If `playerVars.autoplay` is 1, `loadVideoById` will be called.
-      // If `playerVars.autoplay` is 0, `cueVideoById` will be called.
-      this.videoId = "another video id";
-    },
-    stop() {
-      this.player.stopVideo();
-    },
-    pause() {
-      this.player.pauseVideo();
-    },
+
   },
 };
 </script>
@@ -157,7 +140,7 @@ export default {
   font-size: 16px;
   line-height: 16px;
   /* identical to box height, or 100% */
-
+  text-transform: capitalize;
   text-align: center;
   // font-feature-settings: 'pnum'on, 'lnum'on;
   /* #FFFFFF */

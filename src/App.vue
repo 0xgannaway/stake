@@ -2,25 +2,11 @@
   <v-app>
     <navigation :color="color" :flat="flat" />
     <v-main class="pt-0">
-      <home />
-      <!-- <about /> -->
-      <!-- <download />
-      <pricing />
-      <contact /> -->
-    <foote />
+      <router-view></router-view>
+      <v-spacer />
     </v-main>
     <v-scale-transition>
-      <v-btn
-        fab
-        v-show="fab"
-        v-scroll="onScroll"
-        dark
-        fixed
-        bottom
-        right
-        color="secondary"
-        @click="toTop"
-      >
+      <v-btn fab v-show="fab" v-scroll="onScroll" dark fixed bottom right color="secondary" @click="toTop">
         <v-icon>mdi-arrow-up</v-icon>
       </v-btn>
     </v-scale-transition>
@@ -39,11 +25,8 @@
 <script>
 import navigation from "./components/Navigation";
 import foote from "./components/Footer";
-import home from "./components/HomeSection";
-import about from "./components/AboutSection";
-import download from "./components/DownloadSection";
-import pricing from "./components/PricingSection";
-import contact from "./components/ContactSection";
+import home from "./components/Home";
+import stake from "./components/Stake";
 
 export default {
   name: "App",
@@ -52,10 +35,7 @@ export default {
     navigation,
     foote,
     home,
-    about,
-    download,
-    pricing,
-    contact,
+    stake,
   },
 
   data: () => ({
