@@ -4,7 +4,9 @@
       <v-row align="center" justify="center">
         <div class="stake-desc">
           <!-- <div v-html="markdownToHtml"></div> -->
-          <Vue2MarkdownItLight class="md-body" :content="desc" />
+          <!-- <Vue2MarkdownItLight class="md-body" :content="desc" />
+           -->
+           {{desc}}
         </div>
       </v-row>
       <v-row align="center" justify="center">
@@ -119,11 +121,7 @@
 }
 </style>
 <script>
-import { Vue2MarkdownItLight } from 'vue2-markdown-it'
 export default {
-  components: {
-    Vue2MarkdownItLight
-  },
   data() {
     return {
     };
