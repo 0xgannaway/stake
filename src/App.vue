@@ -3,10 +3,11 @@
     <navigation :color="color" :flat="flat" />
     <v-main class="pt-0">
       <home />
-      <about />
-      <download />
+      <!-- <about /> -->
+      <!-- <download />
       <pricing />
-      <contact />
+      <contact /> -->
+    <foote />
     </v-main>
     <v-scale-transition>
       <v-btn
@@ -23,13 +24,12 @@
         <v-icon>mdi-arrow-up</v-icon>
       </v-btn>
     </v-scale-transition>
-    <foote />
   </v-app>
 </template>
 
 <style scoped>
 .v-main {
-  background-image: url("~@/assets/img/bgMain.png");
+  background: #111111;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;

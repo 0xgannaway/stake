@@ -5,7 +5,7 @@
         <v-btn
           v-for="(icon, i) in icons"
           :key="i"
-          class="mx-4 white--text"
+          class="mx-4 white--text btn-footer"
           :href="icon.link"
           target="_blank"
           icon
@@ -14,7 +14,7 @@
         </v-btn>
       </v-card-text>
 
-      <v-card-text class="white--text pt-0">
+      <!-- <v-card-text class="white--text pt-0">
         Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
         Mauris cursus commodo interdum.
       </v-card-text>
@@ -23,7 +23,7 @@
 
       <v-card-text class="white--text">
         {{ new Date().getFullYear() }} — <strong>Calango WEB</strong>
-      </v-card-text>
+      </v-card-text> -->
     </v-card>
   </v-footer>
 </template>
@@ -32,6 +32,9 @@
 .v-card {
   width: 100%;
 }
+.btn-footer {
+  background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+}
 </style>
 
 <script>
@@ -39,7 +42,7 @@ export default {
   data: () => ({
     icons: [
       {
-        text: "mdi-facebook",
+        text: "mdi-twitter",
         link: "",
       },
       {
@@ -52,7 +55,7 @@ export default {
       },
       {
         text: "mdi-instagram",
-        link: "https://instagram.com/joabson_arley/",
+        link: "",
       },
     ],
   }),

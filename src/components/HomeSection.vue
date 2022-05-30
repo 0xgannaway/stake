@@ -1,77 +1,46 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/img/bgHero.jpg" height="750">
+    <v-parallax dark height="583">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="display-2 font-weight-bold mb-4">Who We Are</h1>
-              <h1 class="font-weight-light">
+              <h1 class="who-we-are mb-4">Who We Are</h1>
+              <h1 class="who-we-are-desc">
                 To Become An Unique And Irreplaceable Institution<br />
                 Dedicated to the Emerging frontier of crypto
               </h1>
-              <v-btn outlined large dark @click="$vuetify.goTo('#features')" class="mt-5">
+              <v-btn large dark @click="$vuetify.goTo('#features')" class="mt-5 who-we-are-btn">
                 Get started
-                <!-- <v-icon class="ml-2">mdi-arrow-down</v-icon> -->
               </v-btn>
-              <!-- <div class="video d-flex align-center py-4">
-                <a @click.stop="dialog = true" class="playBut">
-                  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                    xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="60px"
-                    height="60px" viewBox="0 0 213.7 213.7" enable-background="new 0 0 213.7 213.7"
-                    xml:space="preserve">
-                    <polygon class="triangle" id="XMLID_18_" fill="none" stroke-width="7" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-miterlimit="10" points="73.5,62.5 148.5,105.8 73.5,149.1 " />
-
-                    <circle class="circle" id="XMLID_17_" fill="none" stroke-width="7" stroke-linecap="round"
-                      stroke-linejoin="round" stroke-miterlimit="10" cx="106.8" cy="106.8" r="103.3" />
-                  </svg>
-                </a> -->
-                <!-- <p class="subheading ml-2 mb-0">Assista o vídeo</p> -->
-              <!-- </div> -->
             </v-col>
-            <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
+            <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
+              <v-img src="@/assets/img/bg.png"></v-img>
+            </v-col>
           </v-row>
         </v-col>
       </v-row>
-      <div class="svg-border-waves text-white">
-        <v-img src="@/assets/img/borderWaves.svg" />
-      </div>
     </v-parallax>
-    <v-container fluid id="features" class="mt-2">
+    <v-container fluid id="features" class="do-bg">
       <v-row align="center" justify="center">
         <v-col cols="10">
           <v-row align="center" justify="space-around">
-            <!-- <v-col cols="12" class="text-center">
-              <h1 class="font-weight-light display-2">Title</h1>
-              <h1 class="font-weight-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              </h1>
-            </v-col> -->
+            <v-col cols="12" class="text-center">
+              <h1 class="do-title mt-16 mb-16">What We Do</h1>
+            </v-col>
             <v-col cols="12" sm="4" class="text-center" v-for="(feature, i) in features" :key="i">
               <v-hover v-slot:default="{ hover }">
-                <v-card class="card" shaped :elevation="hover ? 10 : 4" :class="{ up: hover }">
+                <div class="card" shaped :elevation="hover ? 10 : 4" :class="{ up: hover }">
                   <v-img :src="feature.img" max-width="100px" class="d-block ml-auto mr-auto"
                     :class="{ 'zoom-efect': hover }"></v-img>
-                  <h1 class="font-weight-regular">{{ feature.title }}</h1>
-                  <h4 class="font-weight-regular subtitle-1">
-                    {{ feature.text }}
-                  </h4>
-                </v-card>
+                  <h1 class="do-text">{{ feature.title }}</h1>
+                </div>
               </v-hover>
             </v-col>
           </v-row>
         </v-col>
       </v-row>
     </v-container>
-    <v-dialog v-model="dialog" max-width="640px">
-      <v-card>
-        <youtube :video-id="videoId" @ready="ready" @playing="playing"></youtube>
-      </v-card>
-    </v-dialog>
-    <div class="svg-border-waves">
-      <img src="~@/assets/img/wave2.svg" />
-    </div>
   </section>
 </template>
 
@@ -84,18 +53,18 @@ export default {
       features: [
         {
           img: require("@/assets/img/icon2.png"),
-          title: "Design Limpo",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          title: "Asset Management",
+          text: "",
         },
         {
           img: require("@/assets/img/icon1.png"),
-          title: "Dados Seguros",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          title: "Utility Platform",
+          text: "",
         },
         {
           img: require("@/assets/img/icon3.png"),
-          title: "Código Aberto",
-          text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+          title: "Research",
+          text: "",
         },
       ],
     };
@@ -138,6 +107,105 @@ export default {
   stroke-dashoffset: 650;
   -webkit-transition: all 0.5s ease-in-out;
   opacity: 0.3;
+}
+
+.btn-1 {
+  background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+}
+
+.who-we-are {
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 72px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  /* Linear */
+
+  background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
+
+.who-we-are-desc {
+
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  /* or 150% */
+
+  display: flex;
+  align-items: center;
+
+  color: #FFFFFF;
+}
+
+.who-we-are-btn {
+  font-family: 'Manrope';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 16px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  // font-feature-settings: 'pnum'on, 'lnum'on;
+  /* #FFFFFF */
+  color: #FFFFFF;
+  /* Inside auto layout */
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+  background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+  border-radius: 8px;
+}
+
+.do-bg {
+  // width: 1440px;
+  // height: 560px;
+  // left: 0px;
+  // top: 583px;
+  background: linear-gradient(90deg, #B224EF 0%, #7579FF 100%);
+}
+
+.do-title {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 72px;
+  line-height: 72px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  /* #FFFFFF */
+
+  color: #FFFFFF;
+}
+
+.do-text {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  /* identical to box height, or 100% */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #FFFFFF;
 }
 
 .playBut {
