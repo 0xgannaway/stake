@@ -5,14 +5,22 @@
         <v-col cols="10">
           <v-row align="center" justify="center">
             <v-col cols="12" md="6" xl="8">
-              <h1 class="who-we-are mb-4 ml-n4">Who We Are</h1>
-              <h1 class="who-we-are-desc">
-                To Become An Unique And Irreplaceable Institution<br />
-                Dedicated to the Emerging frontier of crypto
-              </h1>
-              <v-btn large dark @click="$vuetify.goTo('#features')" class="mt-5 who-we-are-btn">
-                Get started
-              </v-btn>
+              <!-- <v-row align="center" justify="center"> -->
+                <v-row align="center" justify="start">
+                  <h1 class="who-we-are mb-4 ml-n4">Who We Are</h1>
+                </v-row>
+                <v-row align="center" justify="start">
+                  <h1 class="who-we-are-desc">
+                    To Become An Unique And Irreplaceable Institution<br />
+                    Dedicated to the Emerging frontier of crypto
+                  </h1>
+                </v-row>
+                <v-row align="center" justify="start">
+                  <v-btn large dark @click="$vuetify.goTo('#features')" class="mt-5 who-we-are-btn">
+                    Get started
+                  </v-btn>
+                </v-row>
+              <!-- </v-row> -->
             </v-col>
             <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down">
               <v-img src="@/assets/img/bg.png"></v-img>
