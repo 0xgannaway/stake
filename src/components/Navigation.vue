@@ -65,10 +65,10 @@
         <v-icon>mdi-twitter</v-icon>
       </v-btn>
       <v-btn class="mr-2 btn-2" fab x-small v-if="!isXs" @click="$vuetify.goTo('#features')">
-        <v-icon>mdi-Medium</v-icon>
+        <v-icon>fa-medium</v-icon>
       </v-btn>
       <v-btn class="mr-2 btn-3" fab x-small v-if="!isXs" @click="$vuetify.goTo('#features')">
-        <v-icon>mdi-telegram</v-icon>
+        <v-icon>fa-telegram</v-icon>
       </v-btn>
       <v-btn class="mr-2 btn-4" fab x-small v-if="!isXs" @click="$vuetify.goTo('#features')">
         <v-icon>mdi-discord</v-icon>

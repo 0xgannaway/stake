@@ -46,15 +46,15 @@ export default {
         link: "",
       },
       {
-        text: "mdi-twitter",
+        text: "fa-medium",
         link: "",
       },
       {
-        text: "mdi-linkedin",
+        text: "fa-telegram",
         link: "",
       },
       {
-        text: "mdi-instagram",
+        text: "mdi-discord",
         link: "",
       },
     ],
